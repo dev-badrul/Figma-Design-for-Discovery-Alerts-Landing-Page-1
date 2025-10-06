@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery Alert - AI Trade Alerts for Mining Intelligence</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#dc2626',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%); }
+        .pattern-overlay { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .video-overlay { background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)); }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center">
+                <span class="text-2xl font-['Pacifico'] text-primary">Discovery Alert</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                <a href="#resources" class="text-gray-700 hover:text-primary transition-colors">Resources</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-red-700 transition-colors whitespace-nowrap">
+                    Get Free Trial
+                </button>
+            </div>
+            <button class="md:hidden w-6 h-6 flex items-center justify-center">
+                <i class="ri-menu-line text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero-bg pattern-overlay relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        AI Trade Alerts<br>
+                        <span class="text-blue-100">Your Weekly Mining Intelligence</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                        Get AI-powered mining discovery alerts delivered weekly. Our advanced GxM scoring system identifies high-potential opportunities before the market catches on.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-700 transition-colors text-lg font-semibold whitespace-nowrap">
+                            Get My 14-Day Free Trial
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 !rounded-button hover:bg-white hover:text-blue-600 transition-colors text-lg font-semibold whitespace-nowrap flex items-center gap-2">
+                            <i class="ri-play-circle-line"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20mining%20data%20analytics%20dashboard%20on%20computer%20screen%20showing%20charts%20graphs%20and%20geological%20data%20with%20modern%20blue%20interface%20design%20clean%20technology%20visualization&width=600&height=400&seq=hero-video&orientation=landscape" 
+                             alt="Mining Analytics Dashboard" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 video-overlay flex items-center justify-center">
+                            <button class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                <i class="ri-play-fill text-white text-3xl ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="problem">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Why Investors Miss Mining Discoveries
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-close-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Information Overload</h3>
+                                <p class="text-gray-600">Thousands of ASX announcements daily make it impossible to track every opportunity manually.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-time-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Timing is Everything</h3>
+                                <p class="text-gray-600">By the time news reaches mainstream media, the best entry points have already passed.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-search-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Complex Analysis Required</h3>
+                                <p class="text-gray-600">Understanding geological data, market context, and drill results requires specialized expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://readdy.ai/api/search-image?query=Frustrated%20investor%20looking%20at%20multiple%20computer%20screens%20with%20financial%20data%20charts%20and%20mining%20stock%20information%20overwhelming%20complex%20data%20visualization%20professional%20office%20setting&width=600&height=500&seq=problem-image&orientation=portrait" 
+                         alt="Information Overload" class="w-full h-96 object-cover rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="ai-alerts">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    AI Trade Alerts - Your Primary Intelligence
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Receive 5-10 carefully curated weekly alerts powered by our proprietary GxM scoring system and advanced market analysis.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://readdy.ai/api/search-image?query=Modern%20smartphone%20displaying%20mining%20stock%20alert%20notification%20with%20clean%20interface%20showing%20company%20name%20stock%20price%20and%20geological%20data%20professional%20blue%20design%20technology&width=500&height=600&seq=ai-alerts-phone&orientation=portrait" 
+                         alt="AI Trade Alerts" class="w-full h-96 object-cover rounded-2xl shadow-lg">
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="ri-brain-line text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">GxM Scoring System</h3>
+                            <p class="text-gray-600">Our proprietary algorithm analyzes geological data, market conditions, and management quality to score opportunities from 1-100.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="ri-bar-chart-line text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">Market Cap Analysis</h3>
+                            <p class="text-gray-600">Focus on companies under $500M market cap where discoveries can create significant value uplift.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="ri-map-pin-line text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-3">Drill Context Intelligence</h3>
+                            <p class="text-gray-600">Understand the geological significance of each announcement with expert commentary and historical context.</p>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-red-700 transition-colors font-semibold whitespace-nowrap">
+                        Start Free Trial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white" id="discovery-alerts">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                        Discovery Alerts - SMS Escalations
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        When all criteria align perfectly, receive immediate SMS notifications for potential major discoveries.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-smartphone-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Instant SMS Delivery</h3>
+                                <p class="text-gray-300">Critical alerts delivered directly to your phone within minutes of ASX announcement.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-target-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Multi-Factor Triggers</h3>
+                                <p class="text-gray-300">Only activated when GxM score, market conditions, and geological significance all align.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="ri-vip-diamond-line text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Rare & Valuable</h3>
+                                <p class="text-gray-300">Typically 1-3 alerts per month, reserved for the highest conviction opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://readdy.ai/api/search-image?query=Hand%20holding%20smartphone%20with%20urgent%20mining%20discovery%20SMS%20alert%20notification%20red%20background%20professional%20mobile%20interface%20showing%20stock%20ticker%20and%20alert%20message&width=500&height=600&seq=sms-alert&orientation=portrait" 
+                         alt="SMS Discovery Alert" class="w-full h-96 object-cover rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="comparison">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Two Alert Systems, Maximum Coverage
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Compare our dual alert system designed for different investment strategies and time horizons.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                    <div class="p-8">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Features</h3>
+                        <div class="space-y-4">
+                            <div class="text-gray-600">Delivery Method</div>
+                            <div class="text-gray-600">Frequency</div>
+                            <div class="text-gray-600">GxM Scoring</div>
+                            <div class="text-gray-600">Market Analysis</div>
+                            <div class="text-gray-600">Drill Context</div>
+                            <div class="text-gray-600">Urgency Level</div>
+                            <div class="text-gray-600">Best For</div>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-blue-50">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-4">AI Trade Alerts</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2">
+                                <i class="ri-mail-line text-blue-600"></i>
+                                <span class="text-blue-900">Email</span>
+                            </div>
+                            <div class="text-blue-900">5-10 per week</div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-blue-900">Full scoring</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-blue-900">Comprehensive</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-blue-900">Detailed</span>
+                            </div>
+                            <div class="text-blue-900">Medium</div>
+                            <div class="text-blue-900">Regular monitoring</div>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-red-50">
+                        <h3 class="text-lg font-semibold text-red-900 mb-4">Discovery Alerts</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2">
+                                <i class="ri-smartphone-line text-red-600"></i>
+                                <span class="text-red-900">SMS</span>
+                            </div>
+                            <div class="text-red-900">1-3 per month</div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-red-900">Top tier only</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-red-900">Critical factors</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="ri-check-line text-green-600"></i>
+                                <span class="text-red-900">Key highlights</span>
+                            </div>
+                            <div class="text-red-900">Critical</div>
+                            <div class="text-red-900">Major discoveries</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="workflow">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    How Our System Works
+                </h2>
+                <p class="text-xl text-gray-600">
+                    From ASX announcement to your inbox in minutes - powered by AI and expert analysis.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-database-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">ASX Data Ingestion</h3>
+                    <p class="text-gray-600 text-sm">Real-time monitoring of all ASX announcements and market data</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <i class="ri-arrow-right-line text-gray-400 text-2xl"></i>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-robot-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">AI Analysis</h3>
+                    <p class="text-gray-600 text-sm">Machine learning algorithms process geological and market data</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <i class="ri-arrow-right-line text-gray-400 text-2xl"></i>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-calculator-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">GxM Scoring</h3>
+                    <p class="text-gray-600 text-sm">Proprietary scoring system evaluates discovery potential</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <i class="ri-arrow-right-line text-gray-400 text-2xl"></i>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-filter-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Smart Filtering</h3>
+                    <p class="text-gray-600 text-sm">Advanced filters ensure only high-quality alerts reach you</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <i class="ri-arrow-right-line text-gray-400 text-2xl"></i>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-notification-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Alert Delivery</h3>
+                    <p class="text-gray-600 text-sm">Instant delivery via email or SMS based on alert type</p>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <img src="https://readdy.ai/api/search-image?query=Modern%20technology%20workflow%20diagram%20showing%20data%20processing%20from%20mining%20announcements%20through%20AI%20analysis%20to%20mobile%20notifications%20clean%20professional%20blue%20interface%20design&width=800&height=400&seq=workflow-diagram&orientation=landscape" 
+                     alt="System Workflow" class="w-full max-w-4xl mx-auto rounded-2xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="gxm-education">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Understanding GxM Scoring
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Our proprietary scoring system combines Geology, Management, and Market factors for comprehensive analysis.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Commodity Examples</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                    <i class="ri-copper-coin-line text-yellow-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Gold Discovery</h4>
+                                    <p class="text-gray-600">High-grade intersections in proven geological terrain</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">GxM Score: 85</span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="ri-flashlight-line text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Lithium Brine</h4>
+                                    <p class="text-gray-600">Strategic location with favorable extraction conditions</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">GxM Score: 78</span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <i class="ri-hammer-line text-gray-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Copper Porphyry</h4>
+                                    <p class="text-gray-600">Large-scale system with strong alteration signatures</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">GxM Score: 72</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://readdy.ai/api/search-image?query=Professional%20geological%20cross-section%20diagram%20showing%20mineral%20deposits%20with%20technical%20annotations%20and%20scoring%20metrics%20modern%20scientific%20illustration%20clean%20design&width=600&height=500&seq=geology-diagram&orientation=portrait" 
+                         alt="GxM Scoring Examples" class="w-full h-96 object-cover rounded-2xl shadow-lg">
+                </div>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">GxM Scoring Breakdown</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-earth-line text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-4">Geology (40%)</h4>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Grade and continuity</li>
+                            <li>• Geological setting</li>
+                            <li>• Resource potential</li>
+                            <li>• Metallurgy factors</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-team-line text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-4">Management (30%)</h4>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Track record</li>
+                            <li>• Technical expertise</li>
+                            <li>• Capital efficiency</li>
+                            <li>• Strategic partnerships</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="ri-line-chart-line text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-xl mb-4">Market (30%)</h4>
+                        <ul class="text-gray-600 space-y-2 text-left">
+                            <li>• Market cap efficiency</li>
+                            <li>• Commodity outlook</li>
+                            <li>• Liquidity factors</li>
+                            <li>• Timing indicators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white" id="pricing">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                    Choose Your Plan
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Start with a 14-day free trial. No credit card required.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white text-gray-900 rounded-2xl p-8 relative">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Standard</h3>
+                        <div class="text-4xl font-bold mb-2">$479<span class="text-lg font-normal text-gray-600">/year</span></div>
+                        <p class="text-gray-600">Or $99.99/month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-green-600"></i>
+                            <span>AI Trade Alerts (5-10 weekly)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-green-600"></i>
+                            <span>GxM Scoring System</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-green-600"></i>
+                            <span>Market Analysis</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-green-600"></i>
+                            <span>Email Delivery</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-close-line text-gray-400"></i>
+                            <span class="text-gray-400">Discovery SMS Alerts</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-close-line text-gray-400"></i>
+                            <span class="text-gray-400">Priority Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 text-white py-4 !rounded-button hover:bg-gray-800 transition-colors font-semibold whitespace-nowrap">
+                        Start Free Trial
+                    </button>
+                </div>
+                <div class="bg-primary text-white rounded-2xl p-8 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                        <div class="text-4xl font-bold mb-2">$995<span class="text-lg font-normal text-red-200">/year</span></div>
+                        <p class="text-red-200">Save $204 vs monthly</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Everything in Standard</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Discovery SMS Alerts</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Priority Support</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Historical Data Access</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ri-check-line text-white"></i>
+                            <span>Custom Alert Preferences</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-primary py-4 !rounded-button hover:bg-gray-100 transition-colors font-semibold whitespace-nowrap">
+                        Start Free Trial
+                    </button>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-300 mb-4">🔥 Limited Time: Only 47 spots remaining for Q1 2025</p>
+                <p class="text-sm text-gray-400">14-day free trial • Cancel anytime • No setup fees</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="newsletter">
+        <div class="relative overflow-hidden rounded-2xl mx-6 max-w-7xl lg:mx-auto">
+            <div class="absolute inset-0">
+                <img src="https://readdy.ai/api/search-image?query=Large%20mining%20truck%20hauling%20ore%20at%20open%20pit%20mine%20site%20with%20dust%20clouds%20industrial%20mining%20operation%20golden%20hour%20lighting%20professional%20photography&width=1200&height=600&seq=mining-truck&orientation=landscape" 
+                     alt="Mining Operations" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            </div>
+            <div class="relative px-6 py-20 text-center text-white">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                    Stay Up To Date
+                </h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                    Get the latest mining intelligence insights and market updates delivered to your inbox.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" 
+                           class="flex-1 px-4 py-3 rounded-lg text-gray-900 border-none focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-red-700 transition-colors font-semibold whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <span class="text-2xl font-['Pacifico'] text-primary">Discovery Alert</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        AI-powered mining intelligence delivering weekly trade alerts and discovery notifications to help investors identify opportunities before the market.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">AI Trade Alerts</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Discovery Alerts</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">GxM Scoring</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Discovery Alert. All rights reserved. AFSL 123456
+                </p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-visa-fill text-2xl text-gray-400"></i>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <i class="ri-paypal-fill text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const nav = document.querySelector('nav');
+            
+            if (menuButton && nav) {
+                menuButton.addEventListener('click', function() {
+                    const mobileMenu = document.getElementById('mobile-menu-items');
+                    if (mobileMenu) {
+                        mobileMenu.classList.toggle('hidden');
+                    } else {
+                        const menuItems = document.createElement('div');
+                        menuItems.id = 'mobile-menu-items';
+                        menuItems.className = 'md:hidden bg-white border-t border-gray-200 px-6 py-4';
+                        menuItems.innerHTML = `
+                            <div class="space-y-4">
+                                <a href="#about" class="block text-gray-700 hover:text-primary transition-colors">About</a>
+                                <a href="#services" class="block text-gray-700 hover:text-primary transition-colors">Services</a>
+                                <a href="#pricing" class="block text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                                <a href="#resources" class="block text-gray-700 hover:text-primary transition-colors">Resources</a>
+                                <a href="#contact" class="block text-gray-700 hover:text-primary transition-colors">Contact</a>
+                                <button class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-red-700 transition-colors whitespace-nowrap">
+                                    Get Free Trial
+                                </button>
+                            </div>
+                        `;
+                        nav.appendChild(menuItems);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script id="smooth-scrolling">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="cta-tracking">
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButtons = document.querySelectorAll('button:contains("Get My 14-Day Free Trial"), button:contains("Start Free Trial"), button:contains("Join Today")');
+            
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('CTA clicked:', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    
+</script>
+
+</body>
+</html>
